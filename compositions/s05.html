@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head><meta charset="UTF-8"></head>
+  <body>
+    <template>
+      <style>
+#s05-root { position:absolute; inset:0; }
+#s05-root .stage { position:absolute; inset:0; }
+#s05-root .hd { position:absolute; left:140px; top:96px; }
+#s05-root .lk { position:absolute; left:860px; top:290px; width:200px; height:200px; color:var(--green); }
+#s05-root .lk .ic { position:absolute; inset:0; width:200px; height:200px; stroke-width:1.2; }
+#s05-root .who { position:absolute; top:560px; width:640px; display:flex; flex-direction:column; align-items:center; gap:16px; }
+#s05-root .who .ic { width:64px; height:64px; stroke-width:1.5; }
+#s05-root .w0 { left:160px; color:var(--green); } #s05-root .w1 { left:1120px; color:var(--yellow); }
+#s05-root .who .lb { color:var(--text); }
+#s05-root .cap { position:absolute; left:0; right:0; top:850px; text-align:center; color:var(--muted); }
+
+      </style>
+      <div data-hf-id="hf-848w" id="s05-root" data-composition-id="s05" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-tan6" class="stage">
+
+<h1 data-hf-id="hf-f6rb" class="hd">Публичный ключ = <span data-hf-id="hf-abqu" class="g">открытый замок</span></h1>
+<div data-hf-id="hf-5rh3" class="lk"><span data-hf-id="hf-38nk" class="o"><svg data-hf-id="hf-p3wx" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect data-hf-id="hf-9jn9" width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path data-hf-id="hf-vzlr" d="M7 11V7a5 5 0 0 1 9.9-1" /> </svg> </span><span data-hf-id="hf-i298" class="c"><svg data-hf-id="hf-9ojp" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect data-hf-id="hf-laeh" width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path data-hf-id="hf-4qh8" d="M7 11V7a5 5 0 0 1 10 0v4" /> </svg> </span></div>
+<div data-hf-id="hf-23gl" class="who w0"><svg data-hf-id="hf-avgs" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path data-hf-id="hf-frh1" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path data-hf-id="hf-pnso" d="M16 3.128a4 4 0 0 1 0 7.744" /> <path data-hf-id="hf-p3fz" d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle data-hf-id="hf-nb88" cx="9" cy="7" r="4" /> </svg> <span data-hf-id="hf-3nof" class="lb">защёлкнуть: каждый</span></div>
+<div data-hf-id="hf-1bss" class="who w1"><svg data-hf-id="hf-ah5r" class="ic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path data-hf-id="hf-wrgb" d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /> <circle data-hf-id="hf-gxb3" cx="16.5" cy="7.5" r=".5" fill="currentColor" /> </svg> <span data-hf-id="hf-ezlz" class="lb">открыть: только владелец</span></div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var R = "#s05-root ";
+          var $ = function (s) { return R + s; };
+          var V = function (w) { return w + 0.3; };
+          var E = "power3.out", IO = "power2.inOut";
+          var tl = gsap.timeline({ paused: true });
+          function type(sel, t, step) {
+            var els = document.querySelectorAll(R + sel + " .ch");
+            for (var i = 0; i < els.length; i++) tl.set(els[i], { display: "inline" }, t + i * (step || 0.045));
+          }
+          function draw(sel, t, d) {
+            tl.fromTo($(sel), { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d || 0.5, ease: "power2.out" }, t);
+          }
+          tl.fromTo($(".stage"), { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo($(".hd"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: E }, 0.2);
+tl.fromTo($(".lk"), { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.7, ease: E }, V(1.5));
+tl.set($(".lk .c"), { opacity: 0 }, 0);
+tl.fromTo($(".w0"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(3.2));
+tl.to($(".lk .o"), { opacity: 0, duration: 0.3 }, V(4.4));
+tl.to($(".lk .c"), { opacity: 1, duration: 0.3 }, V(4.4));
+tl.fromTo($(".lk"), { y: 0 }, { y: 8, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 }, V(4.4));
+tl.fromTo($(".w1"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, V(5.1));
+tl.to($(".lk"), { color: "#f5c518", duration: 0.4 }, V(5.9));
+
+          tl.to($(".stage"), { opacity: 0, filter: "blur(6px)", y: -10, duration: 0.4, ease: "power2.inOut" }, 7.25);
+          window.__timelines["s05"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
